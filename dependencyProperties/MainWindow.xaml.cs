@@ -20,6 +20,16 @@ namespace dependencyProperties
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        public int MiProperty
+        {
+            get { return (int)GetValue(miDependencyProperty); }
+            set { SetValue(miDependencyProperty, value); }
+        }
+
+        public static readonly DependencyProperty miDependencyProperty =
+            DependencyProperty.Register("MiProperty", typeof(int), typeof(MainWindow), new PropertyMetadata(0));
+
         public MainWindow()
         {
             InitializeComponent();
