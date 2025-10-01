@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button Height="150" Width="300" Content="Dale" FontSize="30" Background="DarkCyan">
+        <Button Height="50" Width="300" Content="Dale" FontSize="30" VerticalAlignment="Top" Background="DarkCyan">
             <Button.Style>
                 <Style TargetType="Button">
                     <Style.Triggers>
@@ -18,5 +18,21 @@
                 </Style>
             </Button.Style>
         </Button>
+        
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Column="0" Grid.Row="0">
+                <TextBox Width="100" Name="MiCuadro" Margin="60" Background="DarkSeaGreen" Text="{Binding ElementName=MiSlider, Path=Value, Mode=TwoWay, StringFormat={}{0:F2}}"></TextBox>
+                <Slider Width="350" Name="MiSlider" Minimum="0" Maximum="100" Background="#FFC1F0C1"></Slider>
+            </StackPanel>
+        </Grid>
+        
     </Grid>
 </Window>
