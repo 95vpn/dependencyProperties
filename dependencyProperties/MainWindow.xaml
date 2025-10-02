@@ -19,7 +19,7 @@
             </Button.Style>
         </Button>
         
-        <Grid>
+        <Grid Margin="0 50 0 0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
@@ -31,6 +31,15 @@
             <StackPanel Grid.Column="0" Grid.Row="0">
                 <TextBox Width="100" Name="MiCuadro" Margin="60" Background="DarkSeaGreen" Text="{Binding ElementName=MiSlider, Path=Value, Mode=TwoWay, StringFormat={}{0:F2}}"></TextBox>
                 <Slider Width="350" Name="MiSlider" Minimum="0" Maximum="100" Background="#FFC1F0C1"></Slider>
+            </StackPanel>
+
+            <StackPanel Grid.Column="1" Grid.Row="0">
+                <Label Content="Nombre" ></Label>
+                <TextBox Width="100" Height="30" Text="{Binding Path=Nombre, Mode=TwoWay}" Foreground="Beige" Background="Firebrick"></TextBox>
+                <Label Content="Apellido" ></Label>
+                <TextBox Width="100" Height="30" Foreground="Beige" Background="Firebrick" Text="{Binding Path=Apellido, Mode=TwoWay}"></TextBox>
+                <Label Content="Nombre Completo" ></Label>
+                <TextBox Width="100" Height="30" Foreground="Beige" Background="Firebrick" Text="{Binding Path=Nombre_completo, Mode=TwoWay}"></TextBox>
             </StackPanel>
         </Grid>
         
