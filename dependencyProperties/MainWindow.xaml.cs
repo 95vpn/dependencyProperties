@@ -33,6 +33,12 @@ namespace dependencyProperties
         public MainWindow()
         {
             InitializeComponent();
+
+            NombreApellido = new JuntaNombre { Nombre = "Juan", Apellido = "Díaz" };
+
+            this.DataContext = NombreApellido;
         }
+
+        public JuntaNombre NombreApellido;
     }
 }

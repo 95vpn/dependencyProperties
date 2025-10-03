@@ -28,8 +28,8 @@ namespace dependencyProperties
 
         public string Apellido
         {
-            get { return nombre; }
-            set { nombre = value; }
+            get { return apellido; }
+            set { apellido = value; }
         }
 
         public string Nombre_completo
