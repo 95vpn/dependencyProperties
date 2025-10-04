@@ -23,13 +23,18 @@ namespace dependencyProperties
 
         public string Nombre
         {
-            get { return nombre; } set { nombre = value; }
+            get { return nombre; } 
+            set { nombre = value;
+                OnPropertyChanged("Nombre_completo");
+            }
         }
 
         public string Apellido
         {
             get { return apellido; }
-            set { apellido = value; }
+            set { apellido = value;
+                OnPropertyChanged("Nombre_completo");
+            }
         }
 
         public string Nombre_completo
